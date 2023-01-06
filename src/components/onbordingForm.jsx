@@ -5,16 +5,10 @@ import OnbordingStart from "./onbordingSteps/onbordingStart";
 
 const useOnboardingFormStyle = makeStyles(onbordingFormStyle);
 const OnbordingForm = ({ currentUser }) => {
-  const classes = useOnboardingFormStyle();
   const [step, setStep] = useState(1);
 
   return (
-    <Grid
-      container
-      direction="column"
-      alignItems="center"
-      className={classes.signupFormContainer}
-    >
+    <Grid>
       {step === 0 && (
         <OnbordingStart currentUser={currentUser} setStep={setStep} />
       )}
